@@ -2,7 +2,7 @@ package object;
 
 public class Event {
 	public Long id;
-	public String name;
+	public String event;
 	public Long price;
 	public Boolean active;
 	public String start_date;
@@ -13,21 +13,17 @@ public class Event {
 		super();
 	}
 	
-	
-
-	public Event(Long id, String name, Long price, Boolean active, String start_date, String end_date,
+	public Event(Long id, String event, Long price, Boolean active, String start_date, String end_date,
 			String created_at) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.event = event;
 		this.price = price;
 		this.active = active;
 		this.start_date = start_date;
 		this.end_date = end_date;
 		this.created_at = created_at;
 	}
-
-
 
 	public Long getId() {
 		return id;
@@ -37,12 +33,12 @@ public class Event {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getEvent() {
+		return event;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setEvent(String event) {
+		this.event = event;
 	}
 
 	public Long getPrice() {
@@ -76,18 +72,18 @@ public class Event {
 	public void setEnd_date(String end_date) {
 		this.end_date = end_date;
 	}
+
 	public String getCreated_at() {
 		return created_at;
 	}
+
 	public void setCreated_at(String created_at) {
 		this.created_at = created_at;
 	}
 
-
-
 	@Override
 	public String toString() {
-		return "Event [name=" + name + "]";
+		return event;
 	}
 	
 	

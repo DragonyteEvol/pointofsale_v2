@@ -3,7 +3,7 @@ package object;
 public class Setting {
 	public Long id;
 	public String nit;
-	public String name;
+	public String setting;
 	public String address;
 	public String phone;
 	public Long default_tip;
@@ -14,12 +14,12 @@ public class Setting {
 		super();
 	}
 
-	public Setting(Long id, String nit, String name, String address, String phone, Long default_tip,
+	public Setting(Long id, String nit, String setting, String address, String phone, Long default_tip,
 			String cash_password, String created_at) {
 		super();
 		this.id = id;
 		this.nit = nit;
-		this.name = name;
+		this.setting = setting;
 		this.address = address;
 		this.phone = phone;
 		this.default_tip = default_tip;
@@ -43,12 +43,12 @@ public class Setting {
 		this.nit = nit;
 	}
 
-	public String getName() {
-		return name;
+	public String getSetting() {
+		return setting;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setSetting(String setting) {
+		this.setting = setting;
 	}
 
 	public String getAddress() {
@@ -90,6 +90,5 @@ public class Setting {
 	public void setCreated_at(String created_at) {
 		this.created_at = created_at;
 	}
-	
 	
 }
