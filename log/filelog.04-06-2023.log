@@ -1,0 +1,23 @@
+04-06-2023 17:13:03 ERROR AnnulmentDaoImpl:37: Table 'pos.users' doesn't exist
+04-06-2023 17:13:16 ERROR AnnulmentDaoImpl:37: Table 'pos.users' doesn't exist
+04-06-2023 17:19:17 ERROR AnnulmentDaoImpl:37: Table 'pos.products' doesn't exist
+04-06-2023 17:26:28 DEBUG AnnulmentDaoImpl:39: setId
+04-06-2023 17:27:07 DEBUG AnnulmentDaoImpl:39: setId
+04-06-2023 17:27:45 DEBUG AnnulmentDaoImpl:39: setId
+04-06-2023 17:28:21 DEBUG AnnulmentDaoImpl:39: setId
+04-06-2023 17:28:21 DEBUG AnnulmentDaoImpl:49: END
+04-06-2023 17:29:57 DEBUG AnnulmentDaoImpl:39: setId
+04-06-2023 17:29:57 DEBUG AnnulmentDaoImpl:39: setReason
+04-06-2023 17:30:34 DEBUG AnnulmentDaoImpl:39: setId
+04-06-2023 17:30:34 DEBUG AnnulmentDaoImpl:39: setReason
+04-06-2023 17:30:34 DEBUG AnnulmentDaoImpl:39: setUser_id
+04-06-2023 17:30:34 DEBUG AnnulmentDaoImpl:39: setUser
+04-06-2023 17:30:34 ERROR AnnulmentDaoImpl:37: Column 'user' not found.
+04-06-2023 17:52:14 DEBUG AnnulmentDaoImpl:39: setId
+04-06-2023 17:52:15 DEBUG AnnulmentDaoImpl:39: setReason
+04-06-2023 17:52:15 DEBUG AnnulmentDaoImpl:39: setUser_id
+04-06-2023 17:52:15 DEBUG AnnulmentDaoImpl:39: setUser
+04-06-2023 17:52:15 DEBUG AnnulmentDaoImpl:39: setProduct_id
+04-06-2023 17:52:15 DEBUG AnnulmentDaoImpl:39: setProduct
+04-06-2023 17:52:15 DEBUG AnnulmentDaoImpl:39: setQuantity
+04-06-2023 17:52:15 DEBUG AnnulmentDaoImpl:39: setCreated_at
