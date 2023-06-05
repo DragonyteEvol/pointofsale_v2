@@ -16,7 +16,8 @@ public class DaoImplement {
 	//UNA LISTA DE STRINGS CON LOS NOMBRES DE LAS TABLAS A UNIR
 	//UN STRING DE LA TABLA PADRE
 	//UN BOOLEANO PARA AGREGAR LA CLAUSULA WHERE DE ID
-	public String joinTable(String sql,String[] JOIN,String TABLE,Boolean where) {
+	public String joinTable(String[] JOIN,String TABLE,Boolean where) {
+		String sql = "SELECT *,"+TABLE+".id as master_id FROM " + TABLE;
 		for(String table : JOIN) {
 			//CAPITALIZE DE LA COLUMNA Y _ID EJ USER_ID
 			String column = table.substring(0,table.length()-1) + "_id"; 
@@ -36,7 +37,6 @@ public class DaoImplement {
 			//CONVERTIR NOMBRE DEL METODO A CAPITALAZE
 			String method_name = field.getName().substring(0,1).toUpperCase() + field.getName().substring(1);
 			method_name = "set"+method_name;
-			Log.getLogger(getClass()).debug(method_name);
 			//EXTRAER METODO DINAMICO
 			
 			//VALIDACION DE STRING
@@ -65,7 +65,7 @@ public class DaoImplement {
 	
 	//SETEA LOS PARAMETROS DE UNA CONSULTA PREPARADA
 	//RECIBE UN STATEMENT EL OBJECTO QUE TIENE LOS VALORES A ASIGNAR Y LA LISTA DE COLUMNAS A ASIGNAR
-	public PreparedStatement setParams(PreparedStatement statement,String[] columns,Object object) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, SQLException {
+	public PreparedStatement setParams(PreparedStatement statement,String[] columns,Object object,Boolean update) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, SQLException {
 		int index = 1;
 		for(String column : columns) {
 			Field field = object.getClass().getField(column);
@@ -90,6 +90,11 @@ public class DaoImplement {
 						Boolean.valueOf(field.get(object).toString()));
 			}
 			index+=1;
+		}
+		if(update) {
+			Field field = object.getClass().getField("id");
+			statement.setLong(index, 
+					Long.valueOf(field.get(object).toString()));
 		}
 		return statement;
 	}
@@ -125,7 +130,29 @@ public class DaoImplement {
 			}
 			index+=1;
 		}
-		sql += sql + "VALUES " + values;
+		sql +=" VALUES " + values;
+		return sql;
+	}
+	
+	//GENERA LA CONSULTA PARA ACTUALIZAR UN REGISTRO
+	//RECIBE UN STRING CON EL NOMBRE DE LA TABLA Y UN ARRAY CON LAS COLUMNAS A MODIFICAR
+	public String generateUpdate(String TABLE,String[] COLUMNS) {
+		String sql = "UPDATE "+ TABLE + " SET ";
+		int index = 1;
+		for(String column : COLUMNS) {
+			sql+=column+"=?";
+			if(!(index==COLUMNS.length)) {
+				sql+=",";
+			}
+			index+=1;
+		}
+		sql+= " WHERE "+TABLE+".id=?";
+		Log.getLogger(getClass()).debug(sql);
+		return sql;
+	}
+	
+	public String generateDelete(String TABLE) {
+		String sql = "DELETE FROM "+ TABLE + " WHERE id=?";
 		return sql;
 	}
 	

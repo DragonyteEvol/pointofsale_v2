@@ -1,0 +1,5 @@
+05-06-2023 19:57:54 ERROR AnnulmentDaoImpl:57: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
+05-06-2023 20:25:11 DEBUG AnnulmentDaoImpl:150: UPDATE annulments SET reason=?, SET user_id=?, SET product_id=?, SET quantity=? WHERE annulments.id=?
+05-06-2023 20:25:11 ERROR AnnulmentDaoImpl:85: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET user_id=2, SET product_id=1, SET quantity='3' WHERE annulments.id=1' at line 1
+05-06-2023 20:27:59 DEBUG AnnulmentDaoImpl:150: UPDATE annulments SET reason=?,user_id=?,product_id=?,quantity=? WHERE annulments.id=?
+05-06-2023 20:29:16 DEBUG AnnulmentDaoImpl:150: UPDATE annulments SET reason=?,user_id=?,product_id=?,quantity=? WHERE annulments.id=?

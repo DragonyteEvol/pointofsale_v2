@@ -20,14 +20,13 @@ public class AnnulmentDaoImpl extends DaoImplement implements AnnulmentDao {
 	private final String TABLE = "annulments";
 	private final String[] COLUMNS = {"reason","user_id","product_id","quantity"};
 	private final String[] JOIN = {"users","products"};
-	private final String GET = "SELECT *,"+TABLE+".id as master_id FROM " + TABLE;
 
 	@Override
 	public List<Annulment> getAll() {
 		ResultSet set = null;
 		List<Annulment> a = new ArrayList<>();
 		try {
-			String sql = joinTable(GET, JOIN, TABLE, false);
+			String sql = joinTable(JOIN, TABLE, false);
 			PreparedStatement statement = this.connection.prepareStatement(sql);
 			set = statement.executeQuery();
 			while(set.next()) {
@@ -46,7 +45,7 @@ public class AnnulmentDaoImpl extends DaoImplement implements AnnulmentDao {
 		ResultSet set = null;
 		Annulment a = null;
 		try {
-			String sql = joinTable(GET, JOIN, TABLE, true);
+			String sql = joinTable(JOIN, TABLE, true);
 			PreparedStatement statement = this.connection.prepareStatement(sql);
 			statement.setLong(1, id);
 			set = statement.executeQuery();
@@ -66,7 +65,7 @@ public class AnnulmentDaoImpl extends DaoImplement implements AnnulmentDao {
 		try {
 			String sql = generateInsert(TABLE, COLUMNS);
 			PreparedStatement statement = this.connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-			statement = setParams(statement, COLUMNS, object);
+			statement = setParams(statement, COLUMNS, object,false);
 			statement.executeUpdate();
 			return getLastId(statement);
 		}catch(Exception e) {
@@ -77,11 +76,25 @@ public class AnnulmentDaoImpl extends DaoImplement implements AnnulmentDao {
 
 	@Override
 	public void update(Annulment object) {
-		
+		try {
+			String sql = generateUpdate(TABLE, COLUMNS);
+			PreparedStatement statement = this.connection.prepareStatement(sql);
+			statement = setParams(statement, COLUMNS, object,true);
+			statement.executeUpdate();
+		}catch(Exception e) {
+			Log.getLogger(getClass()).error(e.getMessage());
+		}
 	}
 
 	@Override
 	public void delete(Annulment object) {
-		
+		try {
+			String sql = generateDelete(TABLE);
+			PreparedStatement statement = this.connection.prepareStatement(sql);
+			statement.setLong(1, object.getId());
+			statement.executeUpdate();
+		}catch(Exception e) {
+			Log.getLogger(getClass()).error(e.getMessage());
+		}
 	}
 }
