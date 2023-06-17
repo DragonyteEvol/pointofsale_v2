@@ -1,0 +1,2 @@
+15-06-2023 07:17:50 ERROR UserDaoImpl:116: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
+15-06-2023 07:17:53 ERROR UserDaoImpl:116: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null

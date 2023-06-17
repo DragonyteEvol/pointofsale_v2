@@ -99,4 +99,25 @@ public class UserDaoImpl extends DaoImplement implements UserDao{
 		}
 	}
 
+	@Override
+	public User getByMail(String mail) {
+		ResultSet set = null;
+		User a = null;
+		try {
+			String sql = joinTable(JOIN, TABLE, false);
+			sql += " WHERE mail=?";
+			PreparedStatement statement = this.connection.prepareStatement(sql);
+			statement.setString(1, mail);
+			set = statement.executeQuery();
+			while(set.next()) {
+				a = (User)(convert(new User(),set));	
+			}
+		}catch(Exception  e) {
+			Log.getLogger(getClass()).error(e.getMessage());
+		}finally {
+			closeResultSet(set);
+		}
+		return a;
+	}
+
 }

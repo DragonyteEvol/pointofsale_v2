@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IndexViewController">
+   <left>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Orange" textFill="#e55807">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="POS" textFill="#dd5105">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="btnCalculator" mnemonicParsing="false" onAction="#showCalculator" style="-fx-background-color: #E55807;" text="Calculadora" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Hyperlink fx:id="txtUser" alignment="BOTTOM_LEFT" text="DragonyteEvol" textFill="#d04d07">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Hyperlink>
+                        <Label fx:id="txtPrivileges" text="Administrator" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="btnCashRegister" mnemonicParsing="false" onAction="#openCashRegister" style="-fx-background-color: #ffffff; -fx-border-color: #E55807;" text="Cash" textFill="#e55807">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" top="10.0" />
+                           </VBox.margin></Button>
+                        <Button fx:id="btnNotify" layoutX="47.0" layoutY="48.0" mnemonicParsing="false" onAction="#showNotify" style="-fx-background-color: #ffffff; -fx-border-color: #E55807;" text="N" textFill="#e55807" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnTrade" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadTrade" style="-fx-background-color: #E55807;" text="Vender" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnAccounting" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadAccounting" style="-fx-background-color: #E55807;" text="Contabilidad" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnInventory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadInventory" style="-fx-background-color: #E55807;" text="Inventario" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnDashboard" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadDashboard" style="-fx-background-color: #E55807;" text="Panel de informacion" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnConfig" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadConfig" style="-fx-background-color: #E55807;" text="Configuracion" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children></VBox>
+         </center>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </left>
+   <bottom>
+      <HBox maxHeight="20.0" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <BorderPane fx:id="pnIndex" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
