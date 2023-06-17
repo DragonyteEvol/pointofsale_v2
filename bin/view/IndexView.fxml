@@ -62,7 +62,7 @@
                            <VBox.margin>
                               <Insets bottom="5.0" left="20.0" top="10.0" />
                            </VBox.margin></Button>
-                        <Button fx:id="btnNotify" layoutX="47.0" layoutY="48.0" mnemonicParsing="false" onAction="#showNotify" style="-fx-background-color: #ffffff; -fx-border-color: #E55807;" text="Cash" textFill="#e55807" />
+                        <Button fx:id="btnNotify" layoutX="47.0" layoutY="48.0" mnemonicParsing="false" onAction="#showNotify" style="-fx-background-color: #ffffff; -fx-border-color: #E55807;" text="N" textFill="#e55807" />
                      </children>
                   </VBox>
                </children>
@@ -107,6 +107,6 @@
       <HBox maxHeight="20.0" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <BorderPane fx:id="pnIndex" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <BorderPane fx:id="pnIndex" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="1101.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
