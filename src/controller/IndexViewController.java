@@ -53,7 +53,7 @@ public class IndexViewController {
 
     @FXML
     void loadConfig(ActionEvent event) {
-
+    	loadPage("/view/ConfigView");
     }
 
     @FXML
