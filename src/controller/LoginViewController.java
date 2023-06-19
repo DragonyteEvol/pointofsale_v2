@@ -1,5 +1,6 @@
 package controller;
 
+
 import dao.UserDao;
 import dao.UserDaoImpl;
 import javafx.event.ActionEvent;
@@ -12,6 +13,9 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
+import log.Log;
+import model.ConfigModel;
 import object.User;
 public class LoginViewController {
 
@@ -26,6 +30,7 @@ public class LoginViewController {
 
     @FXML
     private TextField txtUser;
+    
 
     @FXML
     void eventAction(ActionEvent event) {
@@ -37,9 +42,10 @@ public class LoginViewController {
     		txtPassword.selectAll();
     	}
     	if(source==btnLogin) {
-    		/*UserDao  userDao = new UserDaoImpl();
-    		User user = userDao.getByMail(txtUser.getText());
-    		System.out.print(user.getUser());*/
+    		
+    		if(this.login()) {
+    			this.changeView();
+    		}
     	}
     }
 
@@ -56,6 +62,38 @@ public class LoginViewController {
     			event.consume();
     		}
     	}
+    }
+   
+    //------------------------------------------------------------------------------
+  //VALIDA QUE LA INFORMACION DEL USUARIO SEA CORRECTA
+    private boolean login() {
+    	UserDao  userDao = new UserDaoImpl();
+		User user = userDao.getByMail(txtUser.getText());
+		//VALIDACION DE EXISTENCIA DE USUARIO
+		if(user==null) {
+			return false;
+		}
+		//VALIDACION DE CONTRASEÑA
+		if(user.getPassword().equals(txtPassword.getText())) {
+			ConfigModel.setUser(user);
+			Log.getLogger(getClass()).info("Usuario:" + user.getUser() + "logeado correctamente en el sistema");
+			return true;
+		}else {
+			return false;
+		}	
+    }
+    
+  //CABIA LA VISTA AL MODULO PRINCIPAL
+    private void changeView() {
+    	try {
+    		Parent root = FXMLLoader.load(getClass().getResource("/view/IndexView.fxml"));
+    		Stage stage = (Stage) this.btnLogin.getScene().getWindow();
+    		Scene scene = new Scene(root);
+    		stage.setScene(scene);
+    		stage.show();
+    	}catch(Exception e) {
+			Log.getLogger(getClass()).error(e.getMessage());
+		}
     }
 
 }
