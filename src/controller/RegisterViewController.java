@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import object.User;
 
 public class RegisterViewController {
@@ -38,8 +37,7 @@ public class RegisterViewController {
     	UserDao userDao = new UserDaoImpl();
     	userDao.insert(this.createUser());
     	//CERRA VENTANA
-    	Stage stage = (Stage) this.btnRegister.getScene().getWindow();
-    	stage.close();	
+    	Utils.getUtils().closeView(btnRegister);
     }
 
 }

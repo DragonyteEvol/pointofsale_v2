@@ -1,19 +1,14 @@
 package controller;
 
-
 import dao.UserDao;
 import dao.UserDaoImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
 import log.Log;
 import model.ConfigModel;
 import object.User;
@@ -42,13 +37,12 @@ public class LoginViewController {
     		txtPassword.selectAll();
     	}
     	if(source==btnLogin) {
-    		
     		if(this.login()) {
-    			this.changeView("/view/IndexView.fxml");
+    			Utils.getUtils().alterView("/view/IndexView.fxml", this.btnLogin,false);
     		}
     	}
     	if(source==btnRegister) {
-    		
+    		Utils.getUtils().changeView("/view/RegisterView.fxml", true);
     	}
     }
 
@@ -79,24 +73,10 @@ public class LoginViewController {
 		//VALIDACION DE CONTRASEÑA
 		if(user.getPassword().equals(txtPassword.getText())) {
 			ConfigModel.setUser(user);
-			Log.getLogger(getClass()).info("Usuario:" + user.getUser() + "logeado correctamente en el sistema");
+			Log.getLogger(getClass()).info("Usuario:" + user.getUser() + " logeado correctamente en el sistema");
 			return true;
 		}else {
 			return false;
 		}	
     }
-    
-  //CABIA LA VISTA AL MODULO PRINCIPAL
-    private void changeView(String view) {
-    	try {
-    		Parent root = FXMLLoader.load(getClass().getResource(view));
-    		Stage stage = (Stage) this.btnLogin.getScene().getWindow();
-    		Scene scene = new Scene(root);
-    		stage.setScene(scene);
-    		stage.show();
-    	}catch(Exception e) {
-			Log.getLogger(getClass()).error(e.getMessage());
-		}
-    }
-
 }
