@@ -24,3 +24,5 @@
 19-06-2023 11:04:40 ERROR LoginViewController:79: Cannot invoke "java.awt.Label.setText(String)" because "this.txtInfo" is null
 19-06-2023 11:19:08 INFO  LoginViewController:79: Usuario:dragonytelogeado correctamente en el sistema
 19-06-2023 12:30:35 INFO  LoginViewController:77: Usuario:dragonytelogeado correctamente en el sistema
+19-06-2023 13:05:46 ERROR UserDaoImpl:73: Cannot invoke "Object.toString()" because the return value of "java.lang.reflect.Field.get(Object)" is null
+19-06-2023 13:24:22 INFO  LoginViewController:77: Usuario:Pedro pablo polo jaramillo logeado correctamente en el sistema

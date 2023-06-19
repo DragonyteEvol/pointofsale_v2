@@ -38,7 +38,7 @@
                </VBox.margin>
             </Label>
             <PasswordField fx:id="txtPassword" />
-            <Button fx:id="btnRegister" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#insertUser" style="-fx-background-color: #e55807;" text="Registrar" textFill="WHITE">
+            <Button fx:id="btnRegister" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#eventAction" style="-fx-background-color: #e55807;" text="Registrar" textFill="WHITE">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>

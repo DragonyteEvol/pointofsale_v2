@@ -29,15 +29,19 @@ public class RegisterViewController {
     	user.setUser(txtUser.getText());
     	user.setMail(txtMail.getText());
     	user.setPassword(txtPassword.getText());
+    	user.setAdmin(false);
     	return user;
     }
 
     @FXML
-    void insertUser(ActionEvent event) {
-    	UserDao userDao = new UserDaoImpl();
-    	userDao.insert(this.createUser());
-    	//CERRA VENTANA
-    	Utils.getUtils().closeView(btnRegister);
+    void eventAction(ActionEvent event) {
+    	Object source = event.getSource();
+    	if(source==btnRegister) {
+    		UserDao userDao = new UserDaoImpl();
+        	userDao.insert(this.createUser());
+        	//CERRA VENTANA
+        	Utils.getUtils().closeView(btnRegister);
+    	}
     }
 
 }

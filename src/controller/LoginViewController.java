@@ -62,6 +62,7 @@ public class LoginViewController {
     }
    
     //------------------------------------------------------------------------------
+    
   //VALIDA QUE LA INFORMACION DEL USUARIO SEA CORRECTA
     private boolean login() {
     	UserDao  userDao = new UserDaoImpl();
