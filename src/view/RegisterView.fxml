@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterViewController">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0">
@@ -26,20 +25,20 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField />
+            <TextField fx:id="txtUser" />
             <Label text="Correo:">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField />
+            <TextField fx:id="txtMail" />
             <Label text="Contraseña:">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </Label>
-            <PasswordField />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #e55807;" text="Registrar" textFill="WHITE">
+            <PasswordField fx:id="txtPassword" />
+            <Button fx:id="btnRegister" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#insertUser" style="-fx-background-color: #e55807;" text="Registrar" textFill="WHITE">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>

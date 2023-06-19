@@ -44,8 +44,11 @@ public class LoginViewController {
     	if(source==btnLogin) {
     		
     		if(this.login()) {
-    			this.changeView();
+    			this.changeView("/view/IndexView.fxml");
     		}
+    	}
+    	if(source==btnRegister) {
+    		
     	}
     }
 
@@ -84,9 +87,9 @@ public class LoginViewController {
     }
     
   //CABIA LA VISTA AL MODULO PRINCIPAL
-    private void changeView() {
+    private void changeView(String view) {
     	try {
-    		Parent root = FXMLLoader.load(getClass().getResource("/view/IndexView.fxml"));
+    		Parent root = FXMLLoader.load(getClass().getResource(view));
     		Stage stage = (Stage) this.btnLogin.getScene().getWindow();
     		Scene scene = new Scene(root);
     		stage.setScene(scene);
