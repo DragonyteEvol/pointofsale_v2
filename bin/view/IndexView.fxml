@@ -4,14 +4,16 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IndexViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1350.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IndexViewController">
    <left>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <top>
             <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
@@ -71,21 +73,39 @@
          <center>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="btnTrade" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadTrade" style="-fx-background-color: #E55807;" text="Vender" textFill="WHITE">
+                  <MenuButton fx:id="btnTrade" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" popupSide="RIGHT" style="-fx-background-color: #E55807; -fx-mark-color: #ffffff;" text="Vender" textFill="WHITE">
+                    <items>
+                      <MenuItem fx:id="mnTable" mnemonicParsing="false" onAction="#loadTrade" text="Mesas" />
+                      <MenuItem fx:id="mnRoom" mnemonicParsing="false" onAction="#loadTrade" text="Habitaciones" />
+                    </items>
                      <VBox.margin>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </VBox.margin>
-                  </Button>
-                  <Button fx:id="btnAccounting" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadAccounting" style="-fx-background-color: #E55807;" text="Contabilidad" textFill="WHITE">
+                  </MenuButton>
+                  <MenuButton fx:id="btnAccounting" alignment="CENTER" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" popupSide="RIGHT" style="-fx-background-color: #E55807; -fx-mark-color: #ffffff;" text="Contabilidad" textFill="WHITE">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Ventas" />
+                      <MenuItem mnemonicParsing="false" text="Gastos" />
+                        <MenuItem mnemonicParsing="false" text="Efectivo" />
+                        <MenuItem mnemonicParsing="false" text="Reportes" />
+                        <MenuItem mnemonicParsing="false" text="Metodos de pago" />
+                    </items>
                      <VBox.margin>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </VBox.margin>
-                  </Button>
-                  <Button fx:id="btnInventory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadInventory" style="-fx-background-color: #E55807;" text="Inventario" textFill="WHITE">
+                  </MenuButton>
+                  <MenuButton fx:id="btnInventory" alignment="CENTER" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" popupSide="RIGHT" style="-fx-background-color: #E55807; -fx-mark-color: #ffffff;" text="Inventario" textFill="WHITE">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Insumos" />
+                      <MenuItem mnemonicParsing="false" text="Productos" />
+                        <MenuItem mnemonicParsing="false" text="Inventario" />
+                        <MenuItem mnemonicParsing="false" text="Unidades de medida" />
+                        <MenuItem mnemonicParsing="false" text="Recepcion de insumos" />
+                    </items>
                      <VBox.margin>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </VBox.margin>
-                  </Button>
+                  </MenuButton>
                   <Button fx:id="btnDashboard" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadDashboard" style="-fx-background-color: #E55807;" text="Panel de informacion" textFill="WHITE">
                      <VBox.margin>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />

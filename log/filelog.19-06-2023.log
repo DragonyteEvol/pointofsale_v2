@@ -26,3 +26,58 @@
 19-06-2023 12:30:35 INFO  LoginViewController:77: Usuario:dragonytelogeado correctamente en el sistema
 19-06-2023 13:05:46 ERROR UserDaoImpl:73: Cannot invoke "Object.toString()" because the return value of "java.lang.reflect.Field.get(Object)" is null
 19-06-2023 13:24:22 INFO  LoginViewController:77: Usuario:Pedro pablo polo jaramillo logeado correctamente en el sistema
+19-06-2023 16:57:57 ERROR UserDaoImpl:116: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
+19-06-2023 16:58:40 ERROR UserDaoImpl:116: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
+19-06-2023 16:58:44 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:58:45 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:07 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:08 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:41 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:41 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:42 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:42 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:43 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:43 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:43 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:43 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:43 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:43 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:43 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:43 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:44 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:44 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:44 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:44 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:44 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:44 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 16:59:47 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 16:59:47 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 17:00:01 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+19-06-2023 17:00:01 ERROR Utils:66: 
+/home/dragonyte/Repositories/PointOfSale/bin/view/IndexView.fxml:74
+
+19-06-2023 17:01:43 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema

@@ -9,12 +9,15 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 
 public class IndexViewController {
 
-	@FXML
-    private Button btnAccounting;
+
+    @FXML
+    private MenuButton btnAccounting;
 
     @FXML
     private Button btnCalculator;
@@ -29,13 +32,19 @@ public class IndexViewController {
     private Button btnDashboard;
 
     @FXML
-    private Button btnInventory;
+    private MenuButton btnInventory;
 
     @FXML
     private Button btnNotify;
 
     @FXML
-    private Button btnTrade;
+    private MenuButton btnTrade;
+
+    @FXML
+    private MenuItem mnRoom;
+
+    @FXML
+    private MenuItem mnTable;
 
     @FXML
     private BorderPane pnIndex;
@@ -45,11 +54,18 @@ public class IndexViewController {
 
     @FXML
     private Hyperlink txtUser;
-
+    
     @FXML
-    void loadAccounting(ActionEvent event) {
-
+    void loadTrade(ActionEvent event) {
+    	Object source = event.getSource();
+    	if(source==this.mnRoom) {
+    		loadPage("/view/TradeRoomView");
+    	}
+    	if(source==this.mnTable) {
+    		loadPage("/view/TradeTableView");
+    	}
     }
+
 
     @FXML
     void loadConfig(ActionEvent event) {
@@ -59,16 +75,6 @@ public class IndexViewController {
     @FXML
     void loadDashboard(ActionEvent event) {
     	loadPage("/view/DashboardView");
-    }
-
-    @FXML
-    void loadInventory(ActionEvent event) {
-
-    }
-
-    @FXML
-    void loadTrade(ActionEvent event) {
-
     }
 
     @FXML
