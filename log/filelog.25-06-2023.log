@@ -1,2 +1,5 @@
 25-06-2023 11:15:09 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
 25-06-2023 11:22:00 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema
+25-06-2023 12:06:23 ERROR UserDaoImpl:116: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
+25-06-2023 12:06:25 ERROR UserDaoImpl:116: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
+25-06-2023 12:23:21 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema

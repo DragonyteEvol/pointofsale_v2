@@ -78,6 +78,9 @@ public class IndexViewController {
     	if(source==this.mnExpense) {
     		loadPage("/view/AccountingCostView");
     	}
+    	if(source==this.mnCash) {
+    		loadPage("/view/AccountingMoneyView");
+    	}
     }
     
     @FXML
