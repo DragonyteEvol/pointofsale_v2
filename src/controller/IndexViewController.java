@@ -96,6 +96,9 @@ public class IndexViewController {
     	if(source==mnIngredient) {
     		loadPage("/view/InventoryIngredientView");
     	}
+    	if(source==mnReceipt) {
+    		loadPage("/view/InventoryReceiptView");
+    	}
     }
 
     @FXML
