@@ -14,8 +14,8 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 
 public class IndexViewController {
-
-    @FXML
+	
+	@FXML
     private MenuButton btnAccounting;
 
     @FXML
@@ -46,7 +46,19 @@ public class IndexViewController {
     private MenuItem mnExpense;
 
     @FXML
+    private MenuItem mnIngredient;
+
+    @FXML
+    private MenuItem mnInventory;
+
+    @FXML
     private MenuItem mnPaymentMethod;
+
+    @FXML
+    private MenuItem mnProduct;
+
+    @FXML
+    private MenuItem mnReceipt;
 
     @FXML
     private MenuItem mnReport;
@@ -61,6 +73,9 @@ public class IndexViewController {
     private MenuItem mnTable;
 
     @FXML
+    private MenuItem mnUnit;
+
+    @FXML
     private BorderPane pnIndex;
 
     @FXML
@@ -68,6 +83,14 @@ public class IndexViewController {
 
     @FXML
     private Hyperlink txtUser;
+    
+    @FXML
+    void loadInventory(ActionEvent event) {
+    	Object source = event.getSource();
+    	if(source==mnInventory) {
+    		loadPage("/view/InventoryView");
+    	}
+    }
 
     @FXML
     void loadAccounting(ActionEvent event) {

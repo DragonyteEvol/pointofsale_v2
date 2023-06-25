@@ -96,11 +96,11 @@
                   </MenuButton>
                   <MenuButton fx:id="btnInventory" alignment="CENTER" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" popupSide="RIGHT" style="-fx-background-color: #E55807; -fx-mark-color: #ffffff;" text="Inventario" textFill="WHITE">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Insumos" />
-                      <MenuItem mnemonicParsing="false" text="Productos" />
-                        <MenuItem mnemonicParsing="false" text="Inventario" />
-                        <MenuItem mnemonicParsing="false" text="Unidades de medida" />
-                        <MenuItem mnemonicParsing="false" text="Recepcion de insumos" />
+                      <MenuItem fx:id="mnIngredient" mnemonicParsing="false" onAction="#loadInventory" text="Insumos" />
+                      <MenuItem fx:id="mnProduct" mnemonicParsing="false" onAction="#loadInventory" text="Productos" />
+                        <MenuItem fx:id="mnInventory" mnemonicParsing="false" onAction="#loadInventory" text="Inventario" />
+                        <MenuItem fx:id="mnUnit" mnemonicParsing="false" onAction="#loadInventory" text="Unidades de medida" />
+                        <MenuItem fx:id="mnReceipt" mnemonicParsing="false" onAction="#loadInventory" text="Recepcion de insumos" />
                     </items>
                      <VBox.margin>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
