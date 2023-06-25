@@ -8,6 +8,7 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -15,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountingSellViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountingMoneyViewController">
    <top>
       <HBox prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -68,7 +69,7 @@
                                     <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                                  </BorderPane.margin>
                                  <children>
-                                    <BarChart prefHeight="330.0" prefWidth="824.0">
+                                    <BarChart fx:id="chMoney" prefHeight="330.0" prefWidth="824.0" title="Movimiento diario de efectivo">
                                       <xAxis>
                                         <CategoryAxis side="BOTTOM" />
                                       </xAxis>
@@ -76,16 +77,16 @@
                                         <NumberAxis side="LEFT" />
                                       </yAxis>
                                     </BarChart>
-                                    <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
+                                    <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;">
                                        <content>
-                                          <VBox maxWidth="1.7976931348623157E308" prefHeight="195.0" prefWidth="200.0">
+                                          <VBox maxWidth="1.7976931348623157E308" prefWidth="180.0">
                                              <children>
                                                 <Label text="Sumatoria" textFill="#e55807">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>
                                                    <VBox.margin>
-                                                      <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                                      <Insets bottom="10.0" top="10.0" />
                                                    </VBox.margin>
                                                    <BorderPane.margin>
                                                       <Insets bottom="5.0" top="5.0" />
@@ -108,8 +109,16 @@
                                                       <Font size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="lbDaySell" layoutX="10.0" layoutY="84.0" text="000.000.000" />
+                                                <Label fx:id="lbDaySell" layoutX="10.0" layoutY="84.0" text="000.000.000">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin></Label>
+                                                <Button fx:id="btnGenerateCut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #e55807;" text="Generar corte" textFill="WHITE" />
+                                                <Separator prefWidth="200.0" />
                                              </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                             </padding>
                                           </VBox>
                                        </content>
                                     </ScrollPane>
@@ -124,10 +133,10 @@
                            <children>
                               <TableView fx:id="tbCost" prefWidth="1100.0">
                                 <columns>
-                                  <TableColumn prefWidth="75.0" text="Producto" />
-                                  <TableColumn prefWidth="75.0" text="Cantidad" />
-                                    <TableColumn prefWidth="75.0" text="Precio" />
+                                  <TableColumn prefWidth="75.0" text="Entrada" />
+                                  <TableColumn prefWidth="75.0" text="Salida" />
                                     <TableColumn prefWidth="75.0" text="Fecha" />
+                                    <TableColumn prefWidth="75.0" text="Usuario" />
                                 </columns>
                                  <columnResizePolicy>
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
