@@ -15,7 +15,6 @@ import javafx.scene.layout.BorderPane;
 
 public class IndexViewController {
 
-
     @FXML
     private MenuButton btnAccounting;
 
@@ -41,7 +40,22 @@ public class IndexViewController {
     private MenuButton btnTrade;
 
     @FXML
+    private MenuItem mnCash;
+
+    @FXML
+    private MenuItem mnExpense;
+
+    @FXML
+    private MenuItem mnPaymentMethod;
+
+    @FXML
+    private MenuItem mnReport;
+
+    @FXML
     private MenuItem mnRoom;
+
+    @FXML
+    private MenuItem mnSell;
 
     @FXML
     private MenuItem mnTable;
@@ -54,6 +68,14 @@ public class IndexViewController {
 
     @FXML
     private Hyperlink txtUser;
+
+    @FXML
+    void loadAccounting(ActionEvent event) {
+    	Object source = event.getSource();
+    	if(source==this.mnSell) {
+    		loadPage("/view/AccountingSellView");
+    	}
+    }
     
     @FXML
     void loadTrade(ActionEvent event) {

@@ -1,0 +1,2 @@
+21-06-2023 19:58:55 ERROR UserDaoImpl:116: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
+21-06-2023 19:59:45 INFO  LoginViewController:77: Usuario:dragonyte logeado correctamente en el sistema

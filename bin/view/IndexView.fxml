@@ -84,11 +84,11 @@
                   </MenuButton>
                   <MenuButton fx:id="btnAccounting" alignment="CENTER" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" popupSide="RIGHT" style="-fx-background-color: #E55807; -fx-mark-color: #ffffff;" text="Contabilidad" textFill="WHITE">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Ventas" />
-                      <MenuItem mnemonicParsing="false" text="Gastos" />
-                        <MenuItem mnemonicParsing="false" text="Efectivo" />
-                        <MenuItem mnemonicParsing="false" text="Reportes" />
-                        <MenuItem mnemonicParsing="false" text="Metodos de pago" />
+                      <MenuItem fx:id="mnSell" mnemonicParsing="false" onAction="#loadAccounting" text="Ventas" />
+                      <MenuItem fx:id="mnExpense" mnemonicParsing="false" onAction="#loadAccounting" text="Gastos" />
+                        <MenuItem fx:id="mnCash" mnemonicParsing="false" onAction="#loadAccounting" text="Efectivo" />
+                        <MenuItem fx:id="mnReport" mnemonicParsing="false" onAction="#loadAccounting" text="Reportes" />
+                        <MenuItem fx:id="mnPaymentMethod" mnemonicParsing="false" onAction="#loadAccounting" text="Metodos de pago" />
                     </items>
                      <VBox.margin>
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
@@ -127,6 +127,6 @@
       <HBox maxHeight="20.0" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <BorderPane fx:id="pnIndex" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="1101.0" BorderPane.alignment="CENTER" />
+      <BorderPane fx:id="pnIndex" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="1103.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
