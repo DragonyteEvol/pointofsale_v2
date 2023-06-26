@@ -15,7 +15,7 @@ public class TradeTableViewController {
 
     @FXML
     void addObject(ActionEvent event) {
-
+    	Utils.getUtils().changeView("/view/modal/AddTableView.fxml", true);
     }
 
 }

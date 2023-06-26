@@ -42,7 +42,7 @@ public class LoginViewController {
     		}
     	}
     	if(source==btnRegister) {
-    		Utils.getUtils().changeView("/view/RegisterView.fxml", true);
+    		Utils.getUtils().changeView("/view/modal/RegisterView.fxml", true);
     	}
     }
 
