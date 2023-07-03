@@ -47,43 +47,55 @@ public class AddTableViewController implements Initializable{
 
     @FXML
     void addObject(ActionEvent event) {
-    	Object source = event.getSource();
-    	//INSERTA EL TARGET EN BASE DE DATOS
-    	if(source==this.btnAdd) {
-    		this.setObject();
-    		TargetDao targetDao = new TargetDaoImpl();
-    		targetDao.insert(this.target);
-    		Utils.getUtils().closeView(btnAdd);
-    	}
+    	TargetDao targetDao = new TargetDaoImpl();
+		targetDao.insert(this.setObject());
+		Utils.getUtils().closeView(btnAdd);
     }
 
     @FXML
     void cleanForm(ActionEvent event) {
-    	
+    	this.txtDescription.setText(null);
+    	this.txtTarget.setText(null);
+    	this.spCapacity.setValueFactory(spinnerFactoryCapacity);
+    	this.spPrice.setValueFactory(spinnerFactoryPrice);
+    }
+    
+    private void initView() {
+    	this.spCapacity.setValueFactory(spinnerFactoryCapacity);
+		this.spPrice.setValueFactory(spinnerFactoryPrice);
     }
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		this.spCapacity.setValueFactory(spinnerFactoryCapacity);
-		this.spPrice.setValueFactory(spinnerFactoryPrice);
+		this.initView();
+	}
+	
+	private boolean validateForm(Integer targetName) {
+		if(targetName.equals(0)) {
+			return false;
+		}
+		return true;
 	}
 	
 	//CREA UNA INSTANCIA DEL OBJECTO TARGET ASIGNA SUS RESPECTIVAS VARIABLES
-    private void setObject() {
+    private Target setObject() {
     	//EXTRACCION DE INFORMACION
     	long capacity = Long.parseLong(spCapacity.getValue().toString());
     	long price = Long.parseLong(spPrice.getValue().toString());
     	String description = this.txtDescription.getText();
     	Integer targetName =Integer.valueOf(this.txtTarget.getText());
-    	//ASIGNACION
-    	target = new Target();
-    	target.setCapacity(capacity);
-    	target.setPrice(price);
-    	target.setTarget(targetName);
-    	target.setDescription(description);
-    	target.setRoom(false);
-    	target.setAllocated(false);
-    	DataSingleton.getInstance().setTarget(target);
+    	if(validateForm(targetName)) {
+    		//ASIGNACION
+    		target = new Target();
+        	target.setCapacity(capacity);
+        	target.setPrice(price);
+        	target.setTarget(targetName);
+        	target.setDescription(description);
+        	target.setRoom(false);
+        	target.setAllocated(false);
+        	DataSingleton.getInstance().setTarget(target);
+    	}
+    	return this.target;
     }
 
 }
