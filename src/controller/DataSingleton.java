@@ -1,6 +1,7 @@
 package controller;
 
 import object.Target;
+import object.Unit;
 
 public class DataSingleton {
 	
@@ -9,6 +10,7 @@ public class DataSingleton {
 	//DATA
 	private Target target;
 	private String string;
+	private Unit unit;
 	
 	private DataSingleton() {
 		super();
@@ -39,6 +41,14 @@ public class DataSingleton {
 
 	public void setString(String string) {
 		this.string = string;
+	}
+
+	public Unit getUnit() {
+		return unit;
+	}
+
+	public void setUnit(Unit unit) {
+		this.unit = unit;
 	}
 	
 	
