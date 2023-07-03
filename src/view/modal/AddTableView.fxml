@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.modal.AddTableViewController">
    <children>
       <Label text="Añadir Mesa" textFill="#e55807">
@@ -32,7 +31,7 @@
             <VBox maxWidth="1.7976931348623157E308" prefWidth="280.0">
                <children>
                   <Label text="Capacidad:" />
-                  <Spinner fx:id="spCapacity" maxWidth="1.7976931348623157E308" />
+                  <Spinner fx:id="spCapacity" editable="true" maxWidth="1.7976931348623157E308" />
                </children>
                <HBox.margin>
                   <Insets bottom="5.0" right="5.0" top="5.0" />
@@ -41,7 +40,7 @@
             <VBox maxWidth="1.7976931348623157E308" prefWidth="280.0">
                <children>
                   <Label text="Precio:" />
-                  <Spinner fx:id="spPrice" maxWidth="1.7976931348623157E308" />
+                  <Spinner fx:id="spPrice" editable="true" maxWidth="1.7976931348623157E308" />
                </children>
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" top="5.0" />

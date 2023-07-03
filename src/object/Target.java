@@ -2,7 +2,7 @@ package object;
 
 public class Target {
 	public Long id;
-	public String target;
+	public Integer target;
 	public Long capacity;
 	public String description;
 	public Long price;
@@ -16,7 +16,7 @@ public class Target {
 
 	
 	
-	public Target(Long id, String target, Long capacity, String description, Long price, Boolean room,
+	public Target(Long id, Integer target, Long capacity, String description, Long price, Boolean room,
 			Boolean allocated, String created_at) {
 		super();
 		this.id = id;
@@ -43,13 +43,13 @@ public class Target {
 
 
 
-	public String getTarget() {
+	public Integer getTarget() {
 		return target;
 	}
 
 
 
-	public void setTarget(String target) {
+	public void setTarget(Integer target) {
 		this.target = target;
 	}
 
@@ -129,7 +129,7 @@ public class Target {
 
 	@Override
 	public String toString() {
-		return target;
+		return target.toString();
 	}
 	
 	

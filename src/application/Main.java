@@ -14,8 +14,8 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		//Color :  #E55807
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/view/LoginView.fxml"));
-			//Parent root = FXMLLoader.load(getClass().getResource("/view/IndexView.fxml"));
+			//Parent root = FXMLLoader.load(getClass().getResource("/view/LoginView.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/view/IndexView.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();

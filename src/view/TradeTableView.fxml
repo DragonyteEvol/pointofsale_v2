@@ -5,12 +5,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TradeTableViewController">
    <top>
-      <HBox prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
             <Label text="Vender &gt; Mesas" textFill="#e55807">
                <font>
@@ -24,28 +25,24 @@
       </HBox>
    </top>
    <center>
-      <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
-         <content>
-            <BorderPane prefWidth="1100.0">
-               <top>
-                  <HBox alignment="TOP_RIGHT" prefWidth="200.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addObject" style="-fx-background-color: #e55807; }: ;" text="Añadir" textFill="WHITE" />
-                     </children>
-                     <BorderPane.margin>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </BorderPane.margin>
-                  </HBox>
-               </top>
-               <center>
-                  <HBox fx:id="pnIndex" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                     <BorderPane.margin>
-                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                     </BorderPane.margin>
-                  </HBox>
-               </center>
-            </BorderPane>
-         </content>
-      </ScrollPane>
+      <BorderPane maxWidth="1100.0" minWidth="1100.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="TOP_RIGHT" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addObject" style="-fx-background-color: #e55807; }: ;" text="Añadir" textFill="WHITE" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <ScrollPane hbarPolicy="NEVER" hvalue="1.0" maxWidth="1100.0" minWidth="1100.0" pannable="true" prefWidth="1100.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <content>
+                  <FlowPane fx:id="pnIndex" prefWidth="1100.0" style="-fx-background-color: #ffffff;" />
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
    </center>
 </BorderPane>

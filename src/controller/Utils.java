@@ -32,14 +32,15 @@ public class Utils {
 	 */
 	public void changeView(String view,boolean modal) {
     	try {
-    		Parent root = FXMLLoader.load(getClass().getResource(view));
-			Scene scene = new Scene(root);
+    		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(view));
+    		//Parent root = FXMLLoader.load(getClass().getResource(view));
+			Scene scene = new Scene(fxmlLoader.load());
 			Stage stage = new Stage();
 			if(modal) {
 				stage.initModality(Modality.APPLICATION_MODAL);
 			}
 			stage.setScene(scene);
-			stage.show();
+			stage.showAndWait();
     	}catch(Exception e) {
 			Log.getLogger(getClass()).error(e.getMessage());
 		}
