@@ -1,1 +1,7 @@
 08-07-2023 18:45:21 ERROR CategoryDaoImpl:37: Table 'pos.Categorys' doesn't exist
+08-07-2023 19:21:43 ERROR CategoryDaoImpl:37: Table 'pos.Categorys' doesn't exist
+08-07-2023 19:22:10 ERROR CategoryDaoImpl:73: reason
+08-07-2023 19:24:40 ERROR CategoryDaoImpl:37: Unknown column 'categories.user_id' in 'on clause'
+08-07-2023 19:24:48 ERROR CategoryDaoImpl:73: reason
+08-07-2023 19:27:45 ERROR CategoryDaoImpl:73: category
+08-07-2023 19:29:28 ERROR CategoryDaoImpl:73: No value specified for parameter 2

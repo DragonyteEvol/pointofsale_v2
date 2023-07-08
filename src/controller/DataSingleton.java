@@ -1,5 +1,6 @@
 package controller;
 
+import object.Category;
 import object.Ingredient;
 import object.Target;
 import object.Unit;
@@ -13,6 +14,7 @@ public class DataSingleton {
 	private String string;
 	private Unit unit;
 	private Ingredient ingredient;
+	private Category category;
 	
 	private DataSingleton() {
 		super();
@@ -59,6 +61,14 @@ public class DataSingleton {
 
 	public void setIngredient(Ingredient ingredient) {
 		this.ingredient = ingredient;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 	
 }

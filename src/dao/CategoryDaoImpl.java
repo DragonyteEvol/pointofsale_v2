@@ -17,9 +17,9 @@ public class CategoryDaoImpl extends DaoImplement implements CategoryDao{
 	
 	private Connection connection = ConnectionDatabase.getConnection();
 	
-	private final String TABLE = "Categorys";
-	private final String[] COLUMNS = {"reason","user_id","product_id","quantity"};
-	private final String[] JOIN = {"users","products"};
+	private final String TABLE = "categories";
+	private final String[] COLUMNS = {"categorie"};
+	private final String[] JOIN = {};
 
 
 	@Override

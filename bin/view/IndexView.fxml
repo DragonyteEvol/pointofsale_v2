@@ -100,6 +100,7 @@
                       <MenuItem fx:id="mnProduct" mnemonicParsing="false" onAction="#loadInventory" text="Productos" />
                         <MenuItem fx:id="mnInventory" mnemonicParsing="false" onAction="#loadInventory" text="Inventario" />
                         <MenuItem fx:id="mnUnit" mnemonicParsing="false" onAction="#loadInventory" text="Unidades de medida" />
+                        <MenuItem fx:id="mnCategory" mnemonicParsing="false" onAction="#loadInventory" text="Categorias" />
                         <MenuItem fx:id="mnReceipt" mnemonicParsing="false" onAction="#loadInventory" text="Recepcion de insumos" />
                     </items>
                      <VBox.margin>

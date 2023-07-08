@@ -59,6 +59,9 @@ public class IndexViewController {
 
     @FXML
     private MenuItem mnReceipt;
+    
+    @FXML
+    private MenuItem mnCategory;
 
     @FXML
     private MenuItem mnReport;
@@ -101,6 +104,9 @@ public class IndexViewController {
     	}
     	if(source==this.mnUnit) {
     		loadPage("/view/InventoryUnitView");
+    	}
+    	if(source==this.mnCategory) {
+    		loadPage("/view/InventoryCategoryView");
     	}
     }
 
