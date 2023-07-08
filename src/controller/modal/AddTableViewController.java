@@ -48,7 +48,7 @@ public class AddTableViewController implements Initializable{
     @FXML
     void addObject(ActionEvent event) {
     	TargetDao targetDao = new TargetDaoImpl();
-		targetDao.insert(this.setObject());
+		validateInsert(targetDao.insert(this.setObject()));
 		Utils.getUtils().closeView(btnAdd);
     }
 
@@ -68,6 +68,14 @@ public class AddTableViewController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.initView();
+	}
+	
+	//ASIGNA EL OBJECTO CREADO EN UNA VARIABLE EN MEMORIA
+	private void validateInsert(Long id) {
+		if(id>0) {
+			target.setId(id);
+			DataSingleton.getInstance().setTarget(target);
+		}
 	}
 	
 	private boolean validateForm(Integer targetName) {
@@ -93,7 +101,6 @@ public class AddTableViewController implements Initializable{
         	target.setDescription(description);
         	target.setRoom(false);
         	target.setAllocated(false);
-        	DataSingleton.getInstance().setTarget(target);
     	}
     	return this.target;
     }

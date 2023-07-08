@@ -1,5 +1,6 @@
 package controller;
 
+import object.Ingredient;
 import object.Target;
 import object.Unit;
 
@@ -11,6 +12,7 @@ public class DataSingleton {
 	private Target target;
 	private String string;
 	private Unit unit;
+	private Ingredient ingredient;
 	
 	private DataSingleton() {
 		super();
@@ -50,7 +52,13 @@ public class DataSingleton {
 	public void setUnit(Unit unit) {
 		this.unit = unit;
 	}
-	
-	
+
+	public Ingredient getIngredient() {
+		return ingredient;
+	}
+
+	public void setIngredient(Ingredient ingredient) {
+		this.ingredient = ingredient;
+	}
 	
 }
