@@ -24,6 +24,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
+import log.Log;
 import object.Category;
 import object.Ingredient;
 import object.Inventory;
@@ -78,6 +79,7 @@ public class AddIngredientViewController implements Initializable{
   //ASIGNA EL OBJECTO CREADO EN UNA VARIABLE EN MEMORIA
   	private void validateInsert(Long id) {
   		if(id>0) {
+  			Log.getLogger(getClass()).info("Ingrediente: " + this.ingredient.getIngredient() + " registrado correctamente en la base de datos");
   			this.ingredient.setId(id);
   			setRelations(id);
   			DataSingleton.getInstance().setIngredient(ingredient);
@@ -86,24 +88,28 @@ public class AddIngredientViewController implements Initializable{
   	
   	//INSERTA LAS DEPENCIAS NECESARIAS DEL OBJECTO A BASE DE DATOS
   	private void setRelations(Long id) {
-  		long quantity_min = Long.parseLong(spQuantityMin.getValue().toString());
-  		long quantity = Long.parseLong(spQuantity.getValue().toString());
+  		long quantity_min = spQuantityMin.getValue().longValue();
+  		long quantity = spQuantity.getValue().longValue();
+  		long unit_id = cbUnit.getSelectionModel().getSelectedItem().getId();
   		this.inventory = new Inventory();
   		this.inventory.setIngredient_id(id);
   		this.inventory.setMinimum(quantity_min);
   		this.inventory.setQuantity(quantity);
   		
+  		//CREACION DE OBJECTOS
   		this.movementInventory = new MovementInventory();
   		this.movementInventory.setIngredient_id(id);
   		this.movementInventory.setAddition(quantity);
   		this.movementInventory.setQuantity(quantity);
   		this.movementInventory.setSubstraction(Long.valueOf(0));
+  		this.movementInventory.setUnit_id(unit_id);
   		
   		InventoryDao inventoryDao = new InventoryDaoImpl();
-  		inventoryDao.insert(inventory);
-  		
   		MovementInventoryDao movementInventoryDao = new MovementInventoryDaoImpl();
-  		movementInventoryDao.insert(movementInventory);
+  		//VALIDAR INSERCION DE DEPENDENCIAS
+  		if(inventoryDao.insert(inventory)> 0 & movementInventoryDao.insert(movementInventory)>0) {
+  			Log.getLogger(getClass()).info("Dependencias del ingrediente: " + this.ingredient.getIngredient() + " registradas correctamente en la base de datos");
+  		}
   	}
   	
   	private boolean validateForm(Long unit_id,Long category_id, String ingredient,Long quantity, Long quantity_min) {
@@ -128,12 +134,14 @@ public class AddIngredientViewController implements Initializable{
   	//CREA UNA INSTANCIA DEL OBJECTO TARGET ASIGNA SUS RESPECTIVAS VARIABLES
       private Ingredient setObject() {
       	//EXTRACCION DE INFORMACION
-      	long quantity = Long.parseLong(spQuantity.getValue().toString());
-      	long quantity_min = Long.parseLong(spQuantityMin.getValue().toString());
+      	long quantity = spQuantity.getValue().longValue();
+      	long quantity_min = spQuantityMin.getValue().longValue();
       	long price = Long.parseLong(spPrice.getValue().toString());
       	String ingredient = this.txtIngredient.getText();
       	long unit_id = this.cbUnit.getSelectionModel().getSelectedItem().getId();
+      	String unit = this.cbUnit.getSelectionModel().getSelectedItem().getUnit();
       	long category_id = this.cbCategory.getSelectionModel().getSelectedItem().getId();
+      	String category = this.cbCategory.getSelectionModel().getSelectedItem().getCategorie();
       	boolean amenitie = this.chAmenitie.isSelected();
       	if(validateForm(unit_id, category_id, ingredient, quantity, quantity_min)) {
       		//ASIGNACION INGREDIENTE
@@ -143,6 +151,8 @@ public class AddIngredientViewController implements Initializable{
           	this.ingredient.setUnit_id(unit_id);
           	this.ingredient.setPrice(price);
           	this.ingredient.setAmenitie(amenitie);
+          	this.ingredient.setUnit(unit);
+          	this.ingredient.setCategorie(category);
       	}
       	return this.ingredient;
       }

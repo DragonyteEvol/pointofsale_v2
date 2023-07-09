@@ -10,7 +10,7 @@ public class Ingredient {
 	public Long categorie_id;
 	public String categorie;
 	public Boolean amenitie;
-	public String creted_at;
+	public String created_at;
 	
 	public Ingredient() {
 		super();
@@ -27,7 +27,7 @@ public class Ingredient {
 		this.categorie_id = categorie_id;
 		this.categorie = categorie;
 		this.amenitie = amenitie;
-		this.creted_at = creted_at;
+		this.created_at = creted_at;
 	}
 	
 
@@ -95,12 +95,12 @@ public class Ingredient {
 		this.amenitie = amenitie;
 	}
 
-	public String getCreted_at() {
-		return creted_at;
+	public String getCreated_at() {
+		return created_at;
 	}
 
-	public void setCreted_at(String creted_at) {
-		this.creted_at = creted_at;
+	public void setCreated_at(String creted_at) {
+		this.created_at = creted_at;
 	}
 
 	@Override

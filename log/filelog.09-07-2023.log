@@ -1,0 +1,22 @@
+09-07-2023 11:45:00 ERROR IngredientDaoImpl:36: Column 'creted_at' not found.
+09-07-2023 11:45:28 ERROR MovementInventoryDaoImpl:73: Cannot invoke "Object.toString()" because the return value of "java.lang.reflect.Field.get(Object)" is null
+09-07-2023 11:45:42 ERROR IngredientDaoImpl:36: Column 'creted_at' not found.
+09-07-2023 11:49:06 ERROR IngredientDaoImpl:36: object.Ingredient.setCreated_at(java.lang.String)
+09-07-2023 11:49:30 ERROR MovementInventoryDaoImpl:73: Cannot invoke "Object.toString()" because the return value of "java.lang.reflect.Field.get(Object)" is null
+09-07-2023 11:51:40 ERROR MovementInventoryDaoImpl:73: Cannot invoke "Object.toString()" because the return value of "java.lang.reflect.Field.get(Object)" is null
+09-07-2023 11:56:35 ERROR MovementInventoryDaoImpl:73: Unknown column 'unit_id' in 'field list'
+09-07-2023 12:01:51 INFO  MovementInventoryDaoImpl:69: ON
+09-07-2023 12:01:51 INFO  MovementInventoryDaoImpl:71: OFF
+09-07-2023 12:01:51 ERROR MovementInventoryDaoImpl:75: Unknown column 'unit_id' in 'field list'
+09-07-2023 12:05:46 INFO  MovementInventoryDaoImpl:69: ON
+09-07-2023 12:05:46 INFO  MovementInventoryDaoImpl:71: OFF
+09-07-2023 12:19:52 INFO  AddIngredientViewController:82: Ingrediente: Frijo Rojo registrado correctamente en la base de datos
+09-07-2023 12:19:52 INFO  AddIngredientViewController:111: Dependencias del ingrediente: Frijo Rojo registradas correctamente en la base de datos
+09-07-2023 12:20:45 INFO  AddIngredientViewController:82: Ingrediente: Carne Roja registrado correctamente en la base de datos
+09-07-2023 12:20:45 INFO  AddIngredientViewController:111: Dependencias del ingrediente: Carne Roja registradas correctamente en la base de datos
+09-07-2023 12:21:16 INFO  AddIngredientViewController:82: Ingrediente: Pechuga de pollo registrado correctamente en la base de datos
+09-07-2023 12:21:16 INFO  AddIngredientViewController:111: Dependencias del ingrediente: Pechuga de pollo registradas correctamente en la base de datos
+09-07-2023 12:21:50 INFO  AddIngredientViewController:82: Ingrediente: Frijo Cargamanto registrado correctamente en la base de datos
+09-07-2023 12:21:50 INFO  AddIngredientViewController:111: Dependencias del ingrediente: Frijo Cargamanto registradas correctamente en la base de datos
+09-07-2023 12:22:13 INFO  AddIngredientViewController:82: Ingrediente: Lenteja registrado correctamente en la base de datos
+09-07-2023 12:22:13 INFO  AddIngredientViewController:111: Dependencias del ingrediente: Lenteja registradas correctamente en la base de datos
