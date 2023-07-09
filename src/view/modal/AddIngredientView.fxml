@@ -25,7 +25,7 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></Label>
-      <TextField fx:id="txtIngredient" style="-fx-background-color: #ffffff; -fx-border-color: #d1d1d1;">
+      <TextField fx:id="txtIngredient">
          <VBox.margin>
             <Insets bottom="5.0" />
          </VBox.margin>
@@ -38,7 +38,7 @@
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin></Label>
-                  <ComboBox fx:id="cbUnit" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff; -fx-border-color: #d1d1d1;">
+                  <ComboBox fx:id="cbUnit" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff; -fx-border-color: #d1d1d1; -fx-border-radius: 3px;">
                      <VBox.margin>
                         <Insets bottom="5.0" />
                      </VBox.margin>
@@ -54,7 +54,7 @@
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin></Label>
-                  <ComboBox fx:id="cbCategory" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff; -fx-border-color: #d1d1d1;">
+                  <ComboBox fx:id="cbCategory" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff; -fx-border-color: #d1d1d1; -fx-border-radius: 3px;">
                      <VBox.margin>
                         <Insets bottom="5.0" />
                      </VBox.margin>
@@ -75,7 +75,7 @@
                         <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <Spinner fx:id="spQuantity" blendMode="HARD_LIGHT" maxWidth="1.7976931348623157E308" style="-fx-border-color: #656565;">
+                  <Spinner fx:id="spQuantity" editable="true" maxWidth="1.7976931348623157E308">
                      <VBox.margin>
                         <Insets bottom="5.0" right="5.0" />
                      </VBox.margin>
@@ -89,7 +89,7 @@
                         <Insets left="5.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <Spinner fx:id="spQuantityMin" blendMode="HARD_LIGHT" maxWidth="1.7976931348623157E308" style="-fx-border-color: #656565;">
+                  <Spinner fx:id="spQuantityMin" editable="true" maxWidth="1.7976931348623157E308">
                      <VBox.margin>
                         <Insets left="5.0" />
                      </VBox.margin>
@@ -103,7 +103,7 @@
             <Insets top="5.0" />
          </VBox.margin>
       </Label>
-      <Spinner fx:id="spPrice" blendMode="HARD_LIGHT" maxWidth="1.7976931348623157E308" style="-fx-border-color: #656565;">
+      <Spinner fx:id="spPrice" editable="true" maxWidth="1.7976931348623157E308">
          <VBox.margin>
             <Insets bottom="5.0" />
          </VBox.margin>
