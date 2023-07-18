@@ -11,6 +11,7 @@ import java.util.List;
 
 import log.Log;
 import model.ConnectionDatabase;
+import object.Ingredient;
 import object.Product;
 
 public class ProductDaoImpl extends DaoImplement implements ProductDao{
@@ -18,6 +19,7 @@ public class ProductDaoImpl extends DaoImplement implements ProductDao{
 	private Connection connection = ConnectionDatabase.getConnection();
 	
 	private final String TABLE = "products";
+	private final String DEPENDENCY_TABLE="product_ingredient";
 	private final String[] COLUMNS = {"product","price","time","categorie_id"};
 	private final String[] JOIN = {"categories"};
 
@@ -97,6 +99,39 @@ public class ProductDaoImpl extends DaoImplement implements ProductDao{
 		}catch(Exception e) {
 			Log.getLogger(getClass()).error(e.getMessage());
 		}
+	}
+
+	@Override
+	public Long insert(Product object, List<Ingredient> dependecies) {
+		try {
+			String sql = generateInsert(TABLE, COLUMNS);
+			PreparedStatement statement = this.connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+			statement = setParams(statement, COLUMNS, object,false);
+			statement.executeUpdate();
+			Long id = getLastId(statement);
+			for(Ingredient dependency : dependecies) {
+				this.insertDependency(dependency, id);
+			}
+			return id;
+		}catch(Exception e) {
+			Log.getLogger(getClass()).error(e.getMessage());
+		}
+		return null;
+	}
+	
+	private void insertDependency(Ingredient dependency,Long product_id) {
+		String sql = "INSERT INTO " + DEPENDENCY_TABLE + "(product_id,ingredient_id,quantity) VALUES(?,?,?)";
+		try {
+			PreparedStatement statement = this.connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+			statement.setLong(1, product_id);
+			statement.setLong(2, dependency.getId());
+			statement.setLong(3, dependency.getQuantity());
+			statement.executeUpdate();
+		}catch (Exception e) {
+			Log.getLogger(getClass()).info("FALLO DEPENDECIAS");
+			Log.getLogger(getClass()).error(e.getMessage());
+		}
+		
 	}
 
 }

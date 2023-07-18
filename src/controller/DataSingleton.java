@@ -1,7 +1,13 @@
 package controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import object.Category;
 import object.Ingredient;
+import object.Product;
 import object.Target;
 import object.Unit;
 
@@ -15,6 +21,10 @@ public class DataSingleton {
 	private Unit unit;
 	private Ingredient ingredient;
 	private Category category;
+	private Product product;
+	private VBox pnAuxiliar;
+	private FlowPane pnIndex;
+	private List<Ingredient> productIngredients = new ArrayList<>();
 	
 	private DataSingleton() {
 		super();
@@ -69,6 +79,38 @@ public class DataSingleton {
 
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+	public VBox getPnAuxiliar() {
+		return pnAuxiliar;
+	}
+
+	public void setPnAuxiliar(VBox pnAuxiliar) {
+		this.pnAuxiliar = pnAuxiliar;
+	}
+
+	public List<Ingredient> getProductIngredients() {
+		return productIngredients;
+	}
+
+	public void setProductIngredients(List<Ingredient> productIngredients) {
+		this.productIngredients = productIngredients;
+	}
+
+	public FlowPane getPnIndex() {
+		return pnIndex;
+	}
+
+	public void setPnIndex(FlowPane pnIndex) {
+		this.pnIndex = pnIndex;
 	}
 	
 }

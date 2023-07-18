@@ -97,5 +97,26 @@ public class IngredientDaoImpl extends DaoImplement implements IngredientDao{
 			Log.getLogger(getClass()).error(e.getMessage());
 		}
 	}
+	
+	@Override
+	public List<Ingredient> search(String search) {
+		ResultSet set = null;
+		List<Ingredient> a = new ArrayList<>();
+		try {
+			String sql = joinTable(JOIN, TABLE, false);
+			sql += " WHERE " + TABLE + ".ingredient LIKE '%" + search + "%'";
+			Log.getLogger(getClass()).info(sql);
+			PreparedStatement statement = this.connection.prepareStatement(sql);
+			set = statement.executeQuery();
+			while(set.next()) {
+				a.add((Ingredient)(convert(new Ingredient(),set)));	
+			}
+		}catch(Exception  e) {
+			Log.getLogger(getClass()).error(e.getMessage());
+		}finally {
+			closeResultSet(set);
+		}
+		return a;
+	}
 
 }

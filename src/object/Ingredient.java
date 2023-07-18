@@ -10,6 +10,7 @@ public class Ingredient {
 	public Long categorie_id;
 	public String categorie;
 	public Boolean amenitie;
+	private Long quantity;
 	public String created_at;
 	
 	public Ingredient() {
@@ -102,12 +103,19 @@ public class Ingredient {
 	public void setCreated_at(String creted_at) {
 		this.created_at = creted_at;
 	}
+	
+	public Long getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Long quantity) {
+		this.quantity = quantity;
+	}
+	
 
 	@Override
 	public String toString() {
 		return ingredient;
 	}
-	
-	
 	
 }

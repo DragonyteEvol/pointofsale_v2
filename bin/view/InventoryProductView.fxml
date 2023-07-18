@@ -6,6 +6,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
@@ -25,29 +26,29 @@
       </HBox>
    </top>
    <center>
-      <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
-         <content>
-            <BorderPane prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;">
-               <top>
-                  <HBox alignment="CENTER_RIGHT" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
-                     <children>
-                        <TextField fx:id="txtSearch" promptText="Buscar" />
-                        <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#exportSell" style="-fx-background-color: #E55807;" text="Añadir" textFill="WHITE">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                     </children>
-                  </HBox>
-               </top>
-               <padding>
-                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-               </padding>
-               <center>
-                  <HBox fx:id="pnProduct" prefWidth="200.0" BorderPane.alignment="CENTER" />
-               </center>
-            </BorderPane>
-         </content>
-      </ScrollPane>
+      <BorderPane prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="CENTER_RIGHT" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtSearch" promptText="Buscar" />
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addObject" style="-fx-background-color: #E55807;" text="Añadir" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <center>
+            <ScrollPane hbarPolicy="NEVER" maxWidth="1100.0" prefWidth="1100.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <content>
+                  <FlowPane fx:id="pnIndex" prefWidth="1100.0" style="-fx-background-color: #ffffff;" />
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
    </center>
 </BorderPane>

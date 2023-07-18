@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Spinner?>
@@ -11,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.modal.AddIngredientViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.modal.AddProductViewController">
    <children>
-      <Label text="Añadir Insumo" textFill="#e55807">
+      <Label text="Añadir Producto" textFill="#e55807">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -21,11 +20,11 @@
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>
       </Label>
-      <Label text="Nombre del insumo:">
+      <Label text="Nombre del producto:">
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin></Label>
-      <TextField fx:id="txtIngredient">
+      <TextField fx:id="txtProduct">
          <VBox.margin>
             <Insets bottom="5.0" />
          </VBox.margin>
@@ -34,15 +33,15 @@
          <children>
             <VBox maxWidth="1.7976931348623157E308" prefWidth="280.0">
                <children>
-                  <Label text="Unidad de medida:">
+                  <Label text="Tiempo de preparacion (m): ">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin></Label>
-                  <ComboBox fx:id="cbUnit" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff; -fx-border-color: #d1d1d1; -fx-border-radius: 3px;">
+                  <Spinner fx:id="spTime" editable="true" maxWidth="1.7976931348623157E308">
                      <VBox.margin>
-                        <Insets bottom="5.0" />
+                        <Insets bottom="5.0" right="5.0" />
                      </VBox.margin>
-                  </ComboBox>
+                  </Spinner>
                </children>
                <HBox.margin>
                   <Insets bottom="5.0" right="5.0" top="5.0" />
@@ -66,39 +65,8 @@
             </VBox>
          </children>
       </HBox>
-      <HBox prefWidth="200.0">
-         <children>
-            <VBox maxWidth="1.7976931348623157E308" prefWidth="280.0">
-               <children>
-                  <Label text="Cantidad inicial en inventario:">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Spinner fx:id="spQuantity" editable="true" maxWidth="1.7976931348623157E308">
-                     <VBox.margin>
-                        <Insets bottom="5.0" right="5.0" />
-                     </VBox.margin>
-                  </Spinner>
-               </children>
-            </VBox>
-            <VBox prefWidth="280.0">
-               <children>
-                  <Label text="Cantidad minima del insumo:">
-                     <VBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Spinner fx:id="spQuantityMin" editable="true" maxWidth="1.7976931348623157E308">
-                     <VBox.margin>
-                        <Insets left="5.0" />
-                     </VBox.margin>
-                  </Spinner>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-      <Label text="Precio Inicial:">
+      <HBox prefWidth="200.0" />
+      <Label text="Precio:">
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin>
@@ -108,11 +76,6 @@
             <Insets bottom="5.0" />
          </VBox.margin>
       </Spinner>
-      <CheckBox fx:id="chAmenitie" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Amenitie">
-         <VBox.margin>
-            <Insets top="5.0" />
-         </VBox.margin>
-      </CheckBox>
       <HBox prefWidth="200.0">
          <children>
             <Button fx:id="btnClean" mnemonicParsing="false" onAction="#cleanForm" prefWidth="280.0" style="-fx-background-color: #E55807;" text="Limpiar" textFill="WHITE">
@@ -120,7 +83,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addObject" prefWidth="280.0" style="-fx-background-color: #E55807;" text="Aceptar" textFill="WHITE">
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addObject" prefWidth="280.0" style="-fx-background-color: #E55807;" text="Siguiente" textFill="WHITE">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>

@@ -40,6 +40,7 @@ public class Utils {
 				stage.initModality(Modality.APPLICATION_MODAL);
 			}
 			stage.setScene(scene);
+			stage.setResizable(false);
 			stage.showAndWait();
     	}catch(Exception e) {
 			Log.getLogger(getClass()).error(e.getMessage());
