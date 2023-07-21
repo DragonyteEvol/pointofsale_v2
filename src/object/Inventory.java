@@ -7,6 +7,8 @@ public class Inventory {
 	public String ingredient;
 	public Long quantity;
 	public Long minimum;
+	public String unit;
+	public Long unit_id;
 	public String created_at;
 	
 	public Inventory() {
@@ -21,6 +23,13 @@ public class Inventory {
 		this.quantity = quantity;
 		this.minimum = minimum;
 		this.created_at = created_at;
+	}
+	
+	public Inventory(String ingredient, Long quantity,String unit,String created_at) {
+		this.ingredient = ingredient;
+		this.quantity = quantity;
+		this.created_at = created_at;
+		this.unit = unit;
 	}
 
 	public Long getId() {
@@ -70,8 +79,20 @@ public class Inventory {
 	public void setCreated_at(String created_at) {
 		this.created_at = created_at;
 	}
-	
-	
-	
-	
+
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
+	public Long getUnit_id() {
+		return unit_id;
+	}
+
+	public void setUnit_id(Long unit_id) {
+		this.unit_id = unit_id;
+	}
 }

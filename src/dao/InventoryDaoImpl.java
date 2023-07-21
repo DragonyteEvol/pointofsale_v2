@@ -18,8 +18,8 @@ public class InventoryDaoImpl extends DaoImplement implements InventoryDao{
 	private Connection connection = ConnectionDatabase.getConnection();
 	
 	private final String TABLE = "inventory";
-	private final String[] COLUMNS = {"ingredient_id","quantity","minimum"};
-	private final String[] JOIN = {"ingredients"};
+	private final String[] COLUMNS = {"ingredient_id","quantity","minimum","unit_id"};
+	private final String[] JOIN = {"ingredients","units"};
 
 
 	@Override
@@ -28,6 +28,7 @@ public class InventoryDaoImpl extends DaoImplement implements InventoryDao{
 		List<Inventory> a = new ArrayList<>();
 		try {
 			String sql = joinTable(JOIN, TABLE, false);
+			sql += " ORDER BY " + TABLE + ".quantity DESC";
 			PreparedStatement statement = this.connection.prepareStatement(sql);
 			set = statement.executeQuery();
 			while(set.next()) {
