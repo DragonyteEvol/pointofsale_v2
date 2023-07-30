@@ -14,7 +14,7 @@ public class Bill {
 	public Long event_id;
 	public String event;
 	public Boolean courtesy;
-	public Boolean active;
+	public Integer active;
 	public Boolean restock;
 	public String created_at;
 	
@@ -29,7 +29,7 @@ public class Bill {
 	}
 	
 	public Bill(Long id, Long target_id, String target, Long waiter_id, String waiter, Long user_id, String user,
-			Long discount, Long tip, Long total, Long event_id, String event, Boolean courtesy, Boolean active,
+			Long discount, Long tip, Long total, Long event_id, String event, Boolean courtesy, Integer active,
 			Boolean restock, String created_at) {
 		super();
 		this.id = id;
@@ -128,12 +128,14 @@ public class Bill {
 	public void setCourtesy(Boolean courtesy) {
 		this.courtesy = courtesy;
 	}
-	public Boolean getActive() {
+	public Integer getActive() {
 		return active;
 	}
-	public void setActive(Boolean active) {
+
+	public void setActive(Integer active) {
 		this.active = active;
 	}
+
 	public Boolean getRestock() {
 		return restock;
 	}

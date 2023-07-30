@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Ingresar Factura" textFill="#e55807">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="btnBill" mnemonicParsing="false" onAction="#addBill" style="-fx-background-color: #e55807;" text="Facturar" textFill="WHITE" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtSearch" maxWidth="1.7976931348623157E308" onKeyTyped="#searchObject" promptText="Buscar..." />
+                  <HBox>
+                     <children>
+                        <ScrollPane prefWidth="1100.0" style="-fx-background-color: transparent;">
+                           <content>
+                              <HBox fx:id="pnTop" prefWidth="1055.0" style="-fx-background-color: #ffffff;" />
+                           </content>
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <left>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox fx:id="pnLeft" prefWidth="195.0" style="-fx-background-color: #ffffff;" />
+               </content>
+            </ScrollPane>
+         </left>
+         <center>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <content>
+                  <FlowPane fx:id="pnIndex" prefWidth="860.0" style="-fx-background-color: #ffffff;" />
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefWidth="550.0">
+               <children>
+                  <Label text="Mesero:" textFill="#e55807">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbWaiter" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_RIGHT" prefWidth="550.0">
+               <children>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addObject" style="-fx-background-color: #e55807;" text="Aceptar" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+   </padding>
+</BorderPane>

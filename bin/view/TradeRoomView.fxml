@@ -37,7 +37,7 @@
             </HBox>
          </top>
          <center>
-            <ScrollPane style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+            <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
                <content>
                   <FlowPane fx:id="pnIndex" prefWidth="1100.0" style="-fx-background-color: #ffffff;" />
                </content>

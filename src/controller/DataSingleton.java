@@ -25,6 +25,7 @@ public class DataSingleton {
 	private VBox pnAuxiliar;
 	private FlowPane pnIndex;
 	private List<Ingredient> productIngredients = new ArrayList<>();
+	private List<Product> billProducts = new ArrayList<>();
 	
 	private DataSingleton() {
 		super();
@@ -111,6 +112,14 @@ public class DataSingleton {
 
 	public void setPnIndex(FlowPane pnIndex) {
 		this.pnIndex = pnIndex;
+	}
+
+	public List<Product> getBillProducts() {
+		return billProducts;
+	}
+
+	public void setBillProducts(List<Product> billProducts) {
+		this.billProducts = billProducts;
 	}
 	
 }

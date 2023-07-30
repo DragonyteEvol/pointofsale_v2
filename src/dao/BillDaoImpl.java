@@ -18,7 +18,7 @@ public class BillDaoImpl extends DaoImplement implements BillDao{
 	private Connection connection = ConnectionDatabase.getConnection();
 	
 	private final String TABLE = "bills";
-	private final String[] COLUMNS = {"taget_id","waiter_id","user_id","discount","tip","total","event_id","courtesy","active","restock"};
+	private final String[] COLUMNS = {"target_id","waiter_id","user_id","discount","tip","total","event_id","courtesy","active","restock"};
 	private final String[] JOIN = {"targets","users","events"};
 	
 	@Override
@@ -94,5 +94,25 @@ public class BillDaoImpl extends DaoImplement implements BillDao{
 		}
 	}
 
+	@Override
+	public Bill getByTarget(Long target_id) {
+		ResultSet set = null;
+		Bill a = null;
+		try {
+			String sql = joinTable(JOIN, TABLE, false);
+			sql += " WHERE " + TABLE + ".target_id=?";
+			PreparedStatement statement = this.connection.prepareStatement(sql);
+			statement.setLong(1, target_id);
+			set = statement.executeQuery();
+			while(set.next()) {
+				a = (Bill)(convert(new Bill(),set));	
+			}
+		}catch(Exception  e) {
+			Log.getLogger(getClass()).error(e.getMessage());
+		}finally {
+			closeResultSet(set);
+		}
+		return a;
+	}
 
 }

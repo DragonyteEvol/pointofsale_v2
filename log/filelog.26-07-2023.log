@@ -1,0 +1,35 @@
+26-07-2023 07:57:17 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:17 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:17 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:17 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:17 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:17 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:17 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:42 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:42 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:42 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:42 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:42 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:42 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 07:57:42 ERROR BillDaoImpl:111: No value specified for parameter 2
+26-07-2023 08:01:04 INFO  ProductDaoImpl:165: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.categorie_id =?
+26-07-2023 08:01:05 INFO  ProductDaoImpl:165: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.categorie_id =?
+26-07-2023 19:17:59 INFO  ProductDaoImpl:165: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.categorie_id =?
+26-07-2023 19:18:02 INFO  ProductDaoImpl:165: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.categorie_id =?
+26-07-2023 19:42:22 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%p%'
+26-07-2023 19:42:22 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pe%'
+26-07-2023 19:42:22 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%peh%'
+26-07-2023 19:42:23 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pe%'
+26-07-2023 19:42:23 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pec%'
+26-07-2023 19:42:23 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pech%'
+26-07-2023 19:42:23 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pechu%'
+26-07-2023 19:42:23 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pechug%'
+26-07-2023 19:42:24 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pechuga%'
+26-07-2023 19:42:24 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pechug%'
+26-07-2023 19:42:24 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pechu%'
+26-07-2023 19:42:24 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pech%'
+26-07-2023 19:42:24 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pec%'
+26-07-2023 19:42:25 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pe%'
+26-07-2023 19:42:25 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%p%'
+26-07-2023 19:42:25 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%%'
+26-07-2023 19:42:25 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%%'

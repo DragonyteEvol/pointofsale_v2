@@ -9,6 +9,7 @@ public class Product {
 	public Long categorie_id;
 	public String categorie;
 	public String created_at;
+	private Long quantity;
 	
 	public Product() {
 		super();
@@ -102,7 +103,15 @@ public class Product {
 	public String toString() {
 		return product;
 	}
-	
-	
+
+
+	public Long getQuantity() {
+		return quantity;
+	}
+
+
+	public void setQuantity(Long quantity) {
+		this.quantity = quantity;
+	}
 	
 }

@@ -1,0 +1,33 @@
+22-07-2023 19:44:02 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%p%'
+22-07-2023 19:44:02 ERROR ProductDaoImpl:151: Column 'ingredient' not found.
+22-07-2023 19:44:02 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pe%'
+22-07-2023 19:44:02 ERROR ProductDaoImpl:151: Column 'ingredient' not found.
+22-07-2023 19:44:03 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%p%'
+22-07-2023 19:44:03 ERROR ProductDaoImpl:151: Column 'ingredient' not found.
+22-07-2023 19:44:04 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%%'
+22-07-2023 19:44:04 ERROR ProductDaoImpl:151: Column 'ingredient' not found.
+22-07-2023 19:44:04 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%p%'
+22-07-2023 19:44:04 ERROR ProductDaoImpl:151: Column 'ingredient' not found.
+22-07-2023 19:44:05 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pe%'
+22-07-2023 19:44:05 ERROR ProductDaoImpl:151: Column 'ingredient' not found.
+22-07-2023 19:47:52 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%p%'
+22-07-2023 19:47:52 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%pe%'
+22-07-2023 19:47:53 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%p%'
+22-07-2023 19:47:53 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%%'
+22-07-2023 19:47:54 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%%'
+22-07-2023 19:47:54 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%c%'
+22-07-2023 19:47:54 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%ca%'
+22-07-2023 19:47:54 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%cap%'
+22-07-2023 19:47:55 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%ca%'
+22-07-2023 19:47:55 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%c%'
+22-07-2023 19:47:55 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%%'
+22-07-2023 19:47:55 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%%'
+22-07-2023 19:47:56 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%a%'
+22-07-2023 19:47:56 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%ar%'
+22-07-2023 19:47:56 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%arr%'
+22-07-2023 19:47:56 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%arro%'
+22-07-2023 19:47:56 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%arr%'
+22-07-2023 19:47:57 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%ar%'
+22-07-2023 19:47:57 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%a%'
+22-07-2023 19:47:57 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%%'
+22-07-2023 19:47:57 INFO  ProductDaoImpl:144: SELECT *,products.id as master_id FROM products LEFT JOIN categories ON products.categorie_id=categories.id WHERE products.product LIKE '%%'

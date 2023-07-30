@@ -133,5 +133,48 @@ public class ProductDaoImpl extends DaoImplement implements ProductDao{
 		}
 		
 	}
+	
+	@Override
+	public List<Product> search(String search) {
+		ResultSet set = null;
+		List<Product> a = new ArrayList<>();
+		try {
+			String sql = joinTable(JOIN, TABLE, false);
+			sql += " WHERE " + TABLE + ".product LIKE '%" + search + "%'";
+			Log.getLogger(getClass()).info(sql);
+			PreparedStatement statement = this.connection.prepareStatement(sql);
+			set = statement.executeQuery();
+			while(set.next()) {
+				a.add((Product)(convert(new Product(),set)));	
+			}
+		}catch(Exception  e) {
+			Log.getLogger(getClass()).error(e.getMessage());
+		}finally {
+			closeResultSet(set);
+		}
+		return a;
+	}
+	
+	@Override
+	public List<Product> searchByCategory(Long category_id) {
+		ResultSet set = null;
+		List<Product> a = new ArrayList<>();
+		try {
+			String sql = joinTable(JOIN, TABLE, false);
+			sql += " WHERE " + TABLE + ".categorie_id =?";
+			Log.getLogger(getClass()).info(sql);
+			PreparedStatement statement = this.connection.prepareStatement(sql);
+			statement.setLong(1, category_id);
+			set = statement.executeQuery();
+			while(set.next()) {
+				a.add((Product)(convert(new Product(),set)));	
+			}
+		}catch(Exception  e) {
+			Log.getLogger(getClass()).error(e.getMessage());
+		}finally {
+			closeResultSet(set);
+		}
+		return a;
+	}
 
 }

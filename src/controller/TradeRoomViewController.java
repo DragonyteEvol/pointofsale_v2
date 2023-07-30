@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import controller.components.RoomComponentController;
-import controller.components.TableComponentController;
 import dao.TargetDaoImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +13,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
 import log.Log;
 import object.Target;
 

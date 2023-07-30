@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnAction" mnemonicParsing="false" onAction="#runAction" style="-fx-background-color: #E55807;" text="Button" textFill="WHITE" />
+   </children>
+   <padding>
+      <Insets bottom="1.0" left="2.0" right="2.0" top="1.0" />
+   </padding>
+</HBox>

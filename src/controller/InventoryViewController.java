@@ -2,15 +2,12 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 import controller.components.InventoryAuxiliarComponentController;
-import controller.components.ProductIngredientComponentController;
 import dao.InventoryDaoImpl;
 import javafx.application.Platform;
-import javafx.beans.property.adapter.JavaBeanProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
